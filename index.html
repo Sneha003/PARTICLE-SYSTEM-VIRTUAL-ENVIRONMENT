@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PARTICLE SYSTEM VIRTUAL ENVIRONMENT</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-spe-particles-component@1.0.4/dist/aframe-spe-particles-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-entity
+        position="-26 3 0"
+        spe-particles="
+        color:yellow,red,green,blue;
+        distribution:disc;
+        randomize-velocity:true;
+        radius:1;
+        particle-count:800;
+        velocity:2;
+        velocity-spread:10;
+        drag:1;
+        max-age:1;
+        duration:-1;
+        blending:additive;
+        active-multiplier:1000;
+        size:1,1,1,0;
+        "
+      ></a-entity>
+
+      <a-entity
+        position="-20 1 0"
+        spe-particles="texture: assets/blob.png;
+        particle-count: 300;
+        maxAge: 1;
+        distribution: disc; 
+        acceleration-distribution: box;
+        acceleration: 0 2 0;
+        color: orange"
+      ></a-entity>
+
+      <a-entity
+        position="-15 2 0"
+        spe-particles="texture: assets/blob.png;
+       particle-count: 300;
+        velocity: .5 0 0;
+         max-age: 3;
+         distribution: disc;
+         rotation-axis: 0 0 1;
+          rotation: 120;
+           rotation-spread: 120;
+            radius: 0.1"
+      >
+      </a-entity>
+
+      <a-entity
+        position="-10 2 0"
+        spe-particles="texture: assets/blob.png;
+       particle-count: 300;
+        max-age: 3;
+        distribution: sphere; 
+        color: #888;
+         color-spread: 1 1 1, 0 0 0; 
+         size: 0,2,0"
+      >
+      </a-entity>
+
+      <a-entity
+        position="-5 2 0"
+        spe-particles="texture: assets/blob.png;
+       color: yellow, red;
+        distribution: disc;
+         radius: .1;
+          randomize-position: false;
+           particle-count: 100;
+            velocity: 5; 
+            velocity-spread: 3; 
+            drag: 1; max-age: .5;
+             active-multiplier: 1000; 
+             size: 1,.2;
+              direction: backward"
+      >
+      </a-entity>
+
+      <a-entity
+        position="0 2 0"
+        spe-particles="texture: assets/blob.png;
+       color: yellow, red;
+        distribution: disc;
+         radius: .1;
+          randomize-position: false;
+           particle-count: 100;
+            velocity: 5;
+             velocity-spread: 3;
+              drag: 1;
+               max-age: .5;
+                active-multiplier: 1000;
+                 size: 1,.2"
+      >
+        
+      </a-entity>
+
+      <!-- 
+      <a-entity
+        spe-particles="texture: assets/blob.png; particle-count: 300; maxAge: 1; distribution: disc; acceleration-distribution: box; acceleration: 0 2 0; color: orange"
+      >
+        <a-text value="multiple distribution" mixin="label"></a-text>
+      </a-entity> -->
+
+      <a-sky color="#000000"></a-sky>
+      <a-camera position="0 0 20"></a-camera>
+    </a-scene>
+  </body>
+</html>
